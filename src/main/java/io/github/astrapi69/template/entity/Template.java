@@ -22,43 +22,22 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.template.jpa.entity;
-
-import java.util.UUID;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package io.github.astrapi69.template.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
-import io.github.astrapi69.data.identifiable.Identifiable;
 
-@Entity
-@Table(name = Templates.TABLE_NAME)
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Templates
+public class Template
 {
-	static final String SINGULAR_ENTITY_NAME = "template";
-	static final String TABLE_NAME = SINGULAR_ENTITY_NAME + "s";
-	@Id
-	@GeneratedValue(generator = "UUID")
-	@Column(name = Identifiable.COLUMN_NAME_ID, updatable = false, nullable = false)
-	private UUID id;
-
-	/** The optional filepath from this resource bunlde. */
-	@Column(name = "name", length = 128)
+	int id;
 	String name;
 }

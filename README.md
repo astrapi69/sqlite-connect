@@ -1,3 +1,3 @@
-# spring-boot-template
+# sqlite-connect
 
-template project for start with spring-boot project
+Example for connect a sqlite database with spring-boot
