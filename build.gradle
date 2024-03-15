@@ -217,6 +217,8 @@ dependencies {
     compileOnly("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("org.projectlombok:lombok:$lombokVersion")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+    implementation("org.hibernate:hibernate-core:$hibernateVersion")
     implementation("org.xerial:sqlite-jdbc:$sqliteJdbcVersion")
     implementation("io.github.astrapi69:file-worker:$fileWorkerVersion")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
